@@ -1,0 +1,22 @@
+
+
+
+body {
+    background-color: rgba(59, 61, 87, 0.678);
+    font-style: oblique;
+    font-family: monospace;
+    text-align: center;
+}
+mark {
+    background-color: rgba(46, 62, 153, 0.534);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+a {width: auto;}
+    

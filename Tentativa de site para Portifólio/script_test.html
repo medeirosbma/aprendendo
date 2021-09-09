@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Formulários</title>
+    <link rel="shortcut icon" href="desafio 5/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet"  type="text/css" href="CSS/styles.css"/>
+</head>
+<body>
+    <h1>Brincando com scripts</h1>
+    <hr color="black">
+
+    <br>
+    <h3><br>Soma de valores inteiros utilizando formulários</br></h3>
+
+    <form name="formsoma" action="" method="post">
+        Valor 1: <input type="text" name="f_n1" />
+        Valor 2: <input type="text" name="f_n2" /><p></p>
+        Resultado: <input type="text" name="resultado" /><p></p>
+        <br>
+        <input type="button" name="btn_somar" value="Somar" onclick="soma()" />
+        <input type="reset" name="btn_apagar" value="Apagar" />
+    </form>
+
+    <br><br>
+
+    <h3><b>Conversor de letras maiúsculas para minúsculas e vice versa</b></h3><p> 
+        
+     
+    <form name="formuplower" action="" method="post"  >
+        Digite o texto original: <input type="text" value="Escreva aqui" name="convert"><p>
+        Resultado <input type="text" value="" name="convertresult"><p>
+        <button name="convertclickup" type="button" onclick="upcase()">Deixar letras maiúsculas</button>
+        <button name="convertclicklower" type="button" onclick="lowercase()">Deixar letras minúsculas</button>
+    </form>
+
+    <h3><b>Cálculo de IMC</b></h3><p> 
+
+
+
+    <form name="formimc" action="" method="POST">
+        informe seu peso <input type="text" value="82" name="pesoimc">  <p>
+        Coloque sua altura: <input type="text" value="1.75" name="alturaimc">
+        </p>
+        <button  type="button" onclick="resultadoimc()">Resultado IMC</button>
+        <input type="text" value="" name="resultimc"> 
+
+
+    </form>
+
+    <h4><a href="index.html">Voltar para página inicial</a></h4>
+
+
+</body>
+
+<script language="JavaScript">
+
+    /* trecho função de soma inicio */
+    var f_n1, f_n2, resultado;
+
+    function soma(){
+        f_n1=parseInt(document.formsoma.f_n1.value);
+        f_n2=parseInt(document.formsoma.f_n2.value);
+        somatoria = f_n1 + f_n2;
+        document.formsoma.resultado.value=somatoria;
+    }
+    
+
+
+    /* trecho toUpper/Lower Case */
+        function upcase(){
+        document.formuplower.convertresult.value = document.formuplower.convert.value.toUpperCase(); 
+        }
+    
+        function lowercase(){
+            document.formuplower.convertresult.value = document.formuplower.convert.value.toLowerCase();
+        }
+
+    //IMC
+
+    function resultadoimc(){
+        peso = document.formimc.pesoimc.value;
+        altura = document.formimc.alturaimc.value;
+        imc= peso / (altura * altura);
+        document.formimc.resultadoimc.value = imc;
+    }
+
+
+
+
+</script>
+
+</html>
